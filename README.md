@@ -12,11 +12,17 @@ choco install VirtualBox -y
 choco install Vagrant -y
 ```
 
-### Usage
-Once Vagrant and Virtualbox have been installed, then run the following commands to create your virtual Scala development environment.
+If you do not already have Git installed, then run the following Chocolatey script. Since this installer adds items to the environment variables, you will need to restart the command prompt after the installation completes (before moving to the next step).
 
 ``` bat
 choco install Git -y
+```
+
+### Usage
+Once Vagrant and Virtualbox have been installed, then run the following commands to create your virtual Scala development environment. Be sure to run this in the area in which you'd like
+to clone the Git repository (not C:\windows\system32).
+
+``` bat
 git clone https://github.com/KevinMellott91/scala-development-vm.git
 cd scala-development-vm
 vagrant up --provision
