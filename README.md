@@ -7,18 +7,19 @@ If you are running Windows, then I recommend using Chocolatey to install these p
 
 #### Chocolatey Installation Script
 ``` bat
-@powershell -NoProfile -ExecutionPolicy Bypass -Command "iex ((new-object net.webclient).DownloadString('https://chocolatey.org/install.ps1'))" && SET PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin;
-choco install VirtualBox -y;
-choco install Vagrant -y;
+@powershell -NoProfile -ExecutionPolicy Bypass -Command "iex ((new-object net.webclient).DownloadString('https://chocolatey.org/install.ps1'))" && SET PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin
+choco install VirtualBox -y
+choco install Vagrant -y
 ```
 
 ### Usage
 Once Vagrant and Virtualbox have been installed, then run the following commands to create your virtual Scala development environment.
 
 ``` bat
-git clone https://github.com/KevinMellott91/scala-development-vm.git;
-cd scala-development-vm;
-vagrant up --provision;
+choco install Git -y
+git clone https://github.com/KevinMellott91/scala-development-vm.git
+cd scala-development-vm
+vagrant up --provision
 ```
 
 That's it! The username and password of the Fedora virtual machine are both "vagrant".
