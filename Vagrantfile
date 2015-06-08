@@ -26,17 +26,17 @@ Vagrant.configure(2) do |config|
           "jdk_version" => "7",
           "oracle" => { "accept_oracle_download_terms" => true }
         },
-		"scala" => {
+          "scala" => {
           "version" => "2.10.4",
-		  "checksum" => "b46db638c5c6066eee21f00c447fc13d1dfedbfb60d07db544e79db67ba810c3"
+          "checksum" => "b46db638c5c6066eee21f00c447fc13d1dfedbfb60d07db544e79db67ba810c3"
         }
       }
 
     chef.add_recipe "java::default"
-	chef.add_recipe "scala::default"
-	chef.add_recipe "maven::default"
+    chef.add_recipe "scala::default"
+    chef.add_recipe "maven::default"
     chef.add_recipe "bots::default"
-	chef.add_recipe "idea::default"
+    chef.add_recipe "idea::default"
   end
 
 end
